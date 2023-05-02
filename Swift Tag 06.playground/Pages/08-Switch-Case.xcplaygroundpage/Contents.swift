@@ -23,6 +23,20 @@ case (50,50):
     print("Mana und HP sind komplett voll, du bist bereit für eine Quest")
 case (1...15,1...15):
     print("Mana und HP beide fast leer, sei vorsichtig und gönn dir einen Heiltrank!")
+// Mana über 50, Health unter 50
+case (1...50, 51...):
+    print("Mana über 50, Health unter 50")
+// beides unter 5
+case (1...5, 1...5):
+    print("beides unter 5")
+// health über 90, mana unter 10
+case ( 90..., 1...10):
+    print("health über 90, mana unter 10")
+//verschiedenes
+case (..<15, ..<15):
+    print("beides unter 15")
+case (90..., ...11):
+    print("health über 90, mana unter 10")
 default:
     print("Du befindest dich im guten Mittelfeld, noch brauchst du keinen Heiltrank")
 }

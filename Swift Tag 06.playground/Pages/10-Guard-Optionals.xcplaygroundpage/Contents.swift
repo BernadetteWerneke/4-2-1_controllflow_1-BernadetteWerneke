@@ -2,6 +2,7 @@ import Foundation
 
 
 // TODO: Was bedeutet der _ vor user in Z. 4? Was passiert, wenn man ihn weglässt? Probier es aus!
+//
 func printUsername(_ user: [String: String]) {
 
     // Bedeutung Z. 8: nur wenn user["name"] nicht nil ist, schreibe den wert in name

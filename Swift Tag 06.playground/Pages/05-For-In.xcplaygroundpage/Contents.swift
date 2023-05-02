@@ -3,11 +3,18 @@ import Foundation
 // String
 let stringToLoopOver = "Keep watching movies"
 //TODO: Schleife
+for letter in stringToLoopOver {
+    print(letter)
+}
 
 
 // Array aus Strings
 let movies: [String] = ["Harry Potter", "Twilight", "Lord of the Rings"]
 //TODO: Schleife
+for movie in movies {
+    print(movie)
+}
+ 
 
 
 // Dictionary aus Strings
@@ -15,8 +22,18 @@ let moviesWithRatings: [String:Double] = ["The Batman" : 7.8, "Fast and Furious"
 //TODO: 3 Schleifen
 
 // 1. Schleife: printe die Keys aus
+for key in moviesWithRatings.keys {
+    print(key)
+}
 // 2. Schleife: printe die Values aus
+for value in moviesWithRatings.values {
+    print(value)
+}
+
 // 3. Schleife: printe beides aus
+for (key, value) in moviesWithRatings {
+    print("\(key), \(value)")
+}
 
 
 
@@ -48,9 +65,15 @@ let movieCollections: [String:[String:String]] = [
 //TODO: verschachtelte Schleife
 
 // über jede MovieCollection iterieren
-
+movieCollections.keys.forEach {collection in
+    
     //1.  den Namen der Collection ausgeben
-
+    
+    print(collection)
+}
+    
     //2.  über jeden Film innerhalb der Collection iterieren
-
+    movieCollections.values.forEach {film in
+        print(film)
+    }
     

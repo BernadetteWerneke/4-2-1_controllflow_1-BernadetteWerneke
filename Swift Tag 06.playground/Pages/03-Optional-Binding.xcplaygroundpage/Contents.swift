@@ -2,8 +2,12 @@ import Foundation
 
 //TODO: Lass den Code in Z. 5 laufen. Was wird ausgegeben und warum?
 var boughtItem: String? = "Healing Potion"
-print(boughtItem)
+print(boughtItem!)
 //TODO: Frage beantworten
+/*Ausgegeben wird: Optional("Healing Potion") -> wrapped, wird geprüft auf null
+ ausgepackt wird mit "!" hinter der Variablen
+*/
+
 
 
 // optional binding
@@ -15,7 +19,7 @@ if let item = boughtItem {
 }
 // Vorsicht: item ist nur innerhalb des if-Blocks zugreifbar, im Rest des Codes nicht.
 // Teste es gerne, indem du die nächste Zeile einkommentierst:
-// print(item)
+//print(item)
 
 // Dictionary mit verschiedenen Tränken. Die Values in Dictionaries sind immer Optionals.
 var potionShopInventory: [String: Double] =
@@ -27,10 +31,12 @@ var potionShopInventory: [String: Double] =
 ]
 
 // Hier kommt wieder ein Optional raus, wir müssen ihn auspacken
-print("\(potionShopInventory["Love Potion"])")
+print("\(potionShopInventory["Love Potion"]!)")
 
 //TODO: Den Preis von einem beliebigen Trank aus dem potionShop in eine Variable namens chosenPotionPrice auspacken und printen mit der gleichen Syntax wie in Z. 11
-
+if let chosenPotionPrice = potionShopInventory["Love Potion"] {
+    print("ausgewählt: \(chosenPotionPrice)")
+}
 
 
 // Wir fügen jetzt einen Optional Boolean hinzu, von dem abhängig ist, ob der PotionShop geöffnet hat.
@@ -41,6 +47,11 @@ var isShopOpen: Bool? = true
 // wie muss die Syntax aussehen, um isShopOpen und optionShopInventory in derselben Zeile auszupacken?
 
 //TODO: dein code
+if isShopOpen! {
+    print("It is \(isShopOpen!) that the shop is open and the potion you selected costs  \(potionShopInventory["Love Potion"]!).")
+} else {
+    print("Shop not open. Try again later.")
+}
 
 // Jetzt können wir Optionals in einen If-Block auspacken. Wir lernen später, wie man den Wert so auspackt, dass er im Rest des Codes weiterverwendet werden kann...
 
