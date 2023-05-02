@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='macos' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='01-If-Else-Basic'/>
+        <page name='02-If-Else-Ternary'/>
+        <page name='03-Optional-Binding'/>
+        <page name='04-For-In-Beispiele'/>
+        <page name='05-For-In'/>
+        <page name='06-While-Beispiele'/>
+        <page name='07-While-Schleife'/>
+        <page name='08-Switch-Case'/>
+        <page name='09-Guard-Beispiele'/>
+        <page name='10-Guard-Optionals'/>
+        <page name='11-Guard'/>
+    </pages>
+</playground>
